@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------------------------------------------------------------.
      * |   `  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  |  |   |
      * |------+------+------+------+------+-------------+------+------+------+------+------|
-     * |      | Vol- | Vol+ | Mute |      |      | Left | Down |  Up  |Right |      |      |
+     * |      | Vol- | Vol+ | Mute | Play |      | Left | Down |  Up  |Right |      |      |
      * |------+------+------+------+------+------|------+------+------+------+------+------|
      * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
      * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_LOWER] = LAYOUT_planck_mit(
         KC_GRV,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,  KC_RPRN, KC_PIPE,
-        _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, _______, _______,
+        _______, KC_VOLD, KC_VOLU, KC_MUTE, KC_MPLY, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, _______, _______,
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,
         RESET,   _______, _______, _______, _______,     _______,      _______, _______, _______,  _______, _______
     ),
@@ -76,10 +76,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------------------------------'
      */
     [_MV_1] = LAYOUT_planck_mit(
-        _______, LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4), LGUI(KC_5), LGUI(KC_6),    LGUI(KC_7),    LGUI(KC_8),  LGUI(KC_9),     LGUI(KC_0), _______,
-        _______, _______,    _______,    _______,    _______,    _______,    LALT(KC_LEFT), LALT(KC_DOWN), LALT(KC_UP), LALT(KC_RIGHT), _______,    _______,
-        _______, _______,    _______,    _______,    _______,    _______,    _______,       _______,       _______,     _______,        _______,    _______,
-        _______, _______,    _______,    _______,    _______,           _______,            _______,       _______,     _______,        LGUI(LSFT(KC_LBRC)), LGUI(LSFT(KC_RBRC))
+        _______, LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4),    LGUI(KC_5), LGUI(KC_6),    LGUI(KC_7),    LGUI(KC_8),  LGUI(KC_9),     LGUI(KC_0), _______,
+        _______, _______,    _______,    _______,    _______,       _______,    LALT(KC_LEFT), LALT(KC_DOWN), LALT(KC_UP), LALT(KC_RIGHT), _______,    _______,
+        _______, _______,    _______,    _______,    _______,       _______,    _______,       _______,       _______,     _______,        _______,    _______,
+        _______, _______,    _______,    _______,    LALT(KC_BSPC),           _______,         _______,       _______,     _______,        LGUI(LSFT(KC_LBRC)), LGUI(LSFT(KC_RBRC))
     ),
     /* Movement 2 - text + history navigation + number commands
      * ,-----------------------------------------------------------------------------------.
@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, LGUI(LSFT(KC_1)), LGUI(LSFT(KC_2)), LGUI(LSFT(KC_3)), LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)), LGUI(LSFT(KC_6)), LGUI(LSFT(KC_7)), LGUI(LSFT(KC_8)), LGUI(LSFT(KC_9)), LGUI(LSFT(KC_0)), _______,
         _______, _______,          _______,          _______,          _______,          _______,          LGUI(KC_LEFT),    LGUI(KC_DOWN),    LGUI(KC_UP),      LGUI(KC_RIGHT),   _______,          _______,
         _______, _______,          _______,          _______,          _______,          _______,          _______,          _______,          _______,          _______,          _______,          _______,
-        _______, _______,          _______,          _______,          _______,                  _______,                    _______,          _______,          _______,          LGUI(KC_LBRC),    LGUI(KC_RBRC)
+        _______, _______,          _______,          _______,          LGUI(KC_BSPC),                  _______,              _______,          _______,          _______,          LGUI(KC_LBRC),    LGUI(KC_RBRC)
     ),
     /* WND - window layout management
      * ,-----------------------------------------------------------------------------------.
